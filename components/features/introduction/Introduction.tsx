@@ -15,7 +15,7 @@ function Introduction() {
         aria-label="Open resume in a new tab"
         variant="link"
         onClick={() => {
-          window.open("/resume.pdf", "_blank");
+          window.open("/bangay-resume.pdf", "_blank");
         }}
         className="w-32"
       >
