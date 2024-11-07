@@ -1,16 +1,16 @@
-'use client';
+"use client";
 
 // import { useState, useEffect, useRef } from 'react';
 // import Header from '@/components/header/page';
 // import AboutMe from '@/app/_about/page';
-import Introduction from '@/app/_title/introduction/page';
-import Socials from '@/app/_title/socials/page';
-import Header from '@/components/header/page';
-import Experiences from '@/app/_contents/experiences/page';
-import Projects from '@/app/_contents/my-projects/page';
-import AboutMe from './_contents/about/page';
-import Education from './_contents/education/page';
-import { Separator } from '@/components/ui/separator';
+import IntroductionPage from "@/app/(header)/introduction/page";
+import SocialsPage from "@/app/(header)/socials/page";
+import Header from "@/components/features/header/Header";
+import Experiences from "@/app/(contents)/experiences/page";
+import Projects from "@/app/(contents)/projects/page";
+import AboutMe from "@/app/(contents)/about/page";
+import Education from "@/app/(contents)/education/page";
+import { Separator } from "@/components/ui/separator";
 
 // import Links from '@/app/_links/page';
 // import { cn } from '@/lib/utils';
@@ -67,11 +67,11 @@ function Home() {
   // }, []);
 
   return (
-    <main className='min-h-screen max-w-screen px-24 mx-[8rem]'>
-      <div className='flex justify-between scroll-smooth'>
-        <header className='max-h-screen w-1/2 container justify-between flex flex-col gap-20 py-24 sticky top-0'>
-          <Introduction />
-          <Socials />
+    <main className="min-h-screen max-w-screen px-24 mx-[8rem]">
+      <div className="flex justify-between scroll-smooth">
+        <header className="max-h-screen w-1/2 container justify-between flex flex-col gap-20 py-24 sticky top-0">
+          <IntroductionPage />
+          <SocialsPage />
         </header>
 
         {/* <section className='h-screen  p-6 '>
@@ -87,24 +87,24 @@ function Home() {
           </div>
         ))}
       </section> */}
-        <section className='w-1/2 h-full container flex flex-col py-24'>
-          <div className='scroll-mt-16 pb-12'>
+        <section className="w-1/2 h-full container flex flex-col py-24">
+          <div className="scroll-mt-16 pb-12">
             <AboutMe />
           </div>
-          <div className='scroll-mt-16 pb-12'>
+          <div className="scroll-mt-16 pb-12">
             <Experiences />
           </div>
-          <Separator className='my-12 bg-primary' />
-          <div className='scroll-mt-16'>
+          <Separator className="my-12 bg-primary" />
+          <div className="scroll-mt-16">
             <Projects />
           </div>
-          <Separator className='my-12 bg-primary' />
-          <div className='scroll-mt-16'>
+          <Separator className="my-12 bg-primary" />
+          <div className="scroll-mt-16">
             <Education />
           </div>
         </section>
         {/* Dark Mode Toggle */}
-        <section className='fixed top-5 right-5'>
+        <section className="fixed top-5 right-5">
           <Header />
         </section>
       </div>
