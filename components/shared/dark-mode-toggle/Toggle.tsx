@@ -5,6 +5,7 @@ import { useTheme } from "@/lib/context/theme/ThemeContext";
 import { Moon, Sun } from "lucide-react";
 import { useState, useEffect } from "react";
 import Abbr from "@/components/shared/tooltip/Tooltip";
+import { Button } from "@/components/ui/button";
 
 function Toggle() {
   const [isDark, setIsDark] = useState(false);
@@ -19,28 +20,18 @@ function Toggle() {
 
   return (
     <div className="flex items-center space-x-2 ">
-      <Switch
-        id="dark-mode-toggle"
-        checked={isDark}
-        onCheckedChange={() => {
-          setIsDark(!isDark);
-          setTheme(isDark ? "light" : "dark");
-        }}
-      />
-      <label
-        htmlFor="dark-mode-toggle"
-        // className='hover:transition-all hover:duration-100 hover:scale-125'
-      >
-        {isDark ? (
-          <Abbr title="Switch to Light Mode">
-            <Moon />
-          </Abbr>
-        ) : (
-          <Abbr title="Switch to Dark Mode">
-            <Sun />
-          </Abbr>
-        )}
-      </label>
+      <Abbr title={isDark ? "Switch to Light Mode" : "Switch to Dark Mode"}>
+        <Button
+          variant="outline"
+          size="icon"
+          onClick={() => {
+            setIsDark(!isDark);
+            setTheme(isDark ? "light" : "dark");
+          }}
+        >
+          {isDark ? <Moon /> : <Sun />}
+        </Button>
+      </Abbr>
     </div>
   );
 }

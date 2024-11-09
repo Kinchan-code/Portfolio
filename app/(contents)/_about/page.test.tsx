@@ -1,6 +1,6 @@
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
-import AboutMe from "@/app/(contents)/about/page";
+import AboutMe from "@/app/(contents)/_about/page";
 
 describe("AboutMe", () => {
   it("renders a heading", () => {

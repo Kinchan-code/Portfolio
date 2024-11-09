@@ -1,8 +1,9 @@
-import React, { PropsWithChildren } from "react";
+import React, { PropsWithChildren, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Link } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
+import Modal from "../modal/Modal";
 
 type Links = { name: string; path: string }[];
 
@@ -24,25 +25,42 @@ type CardProps = PropsWithChildren<{
 }>;
 
 function Card({ info }: CardProps) {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <main className="flex gap-6 p-4 px-6 w-full rounded-lg hover:bg-primary/5 cursor-pointer">
-      <section className="w-1/4">
+    <main className="flex gap-6 lg:p-4 p-2 lg:px-6 lg:flex-row flex-col w-full rounded-lg hover:bg-primary/5 cursor-pointer">
+      <section className="w-full lg:w-1/4">
         {info.date && (
           <p className="font-list font-bold text-xs text-muted-foreground uppercase pt-1">
             {info.date}
           </p>
         )}
         {info.image && (
-          <Image
-            src={info.image}
-            alt={info.title || ""}
-            height={150}
-            width={150}
-            className="rounded-md ring-1 ring-primary/20"
-          />
+          <Modal
+            trigger={
+              <Image
+                src={info.image}
+                alt={info.title || ""}
+                height={150}
+                width={150}
+                className="rounded-md w-full h-full object-cover cursor-pointer"
+              />
+            }
+            title={info.title || ""}
+            open={isOpen}
+            setOpen={setIsOpen}
+          >
+            <Image
+              src={info.image}
+              alt={info.title || ""}
+              height={1000}
+              width={1000}
+              className="rounded-md h-full w-full"
+            />
+          </Modal>
         )}
       </section>
-      <section className="w-3/4 flex flex-col gap-2">
+      <section className="w-full lg:w-3/4 flex flex-col gap-2">
         <div
           className="font-bold text-md flex items-center gap-2 cursor-pointer hover:underline hover:text-blue-600 dark:hover:text-blue-400"
           onClick={() => {
