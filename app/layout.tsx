@@ -5,6 +5,7 @@ import "./globals.css";
 import { Suspense } from "react";
 import Loader from "@/components/shared/loader/Loader";
 import { ThemeProvider } from "@/lib/provider/theme-provider/Theme";
+import { Analytics } from "@vercel/analytics/react";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -33,7 +34,10 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ThemeProvider defaultTheme="dark" storageKey="mode">
-          <Suspense fallback={<Loader />}>{children}</Suspense>
+          <Suspense fallback={<Loader />}>
+            {children}
+            <Analytics />
+          </Suspense>
         </ThemeProvider>
       </body>
     </html>
