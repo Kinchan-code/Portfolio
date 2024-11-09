@@ -1,6 +1,3 @@
-"use client";
-
-import { Switch } from "@/components/ui/switch";
 import { useTheme } from "@/lib/context/theme/ThemeContext";
 import { Moon, Sun } from "lucide-react";
 import { useState, useEffect } from "react";

@@ -1,8 +1,6 @@
 import SocialsPage from "@/app/(header)/_socials/page";
-import ImageIcon from "@/components/shared/avatar/Avatar";
 import { motion } from "framer-motion";
 import { ArrowUpRight, Terminal } from "lucide-react";
-import Me from "@/public/me.jpg";
 import { Button } from "@/components/ui/button";
 
 function Introduction() {
