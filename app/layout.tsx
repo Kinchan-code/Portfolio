@@ -29,15 +29,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <ThemeProvider defaultTheme="dark" storageKey="mode">
-        <Suspense fallback={<Loader />}>
-          <body
-            className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-          >
-            {children}
-          </body>
-        </Suspense>
-      </ThemeProvider>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        <ThemeProvider defaultTheme="dark" storageKey="mode">
+          <Suspense fallback={<Loader />}>{children}</Suspense>
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
