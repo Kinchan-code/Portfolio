@@ -5,6 +5,8 @@ import "./globals.css";
 import { Suspense } from "react";
 import Loader from "@/components/shared/loader/Loader";
 import { ThemeProvider } from "@/lib/provider/theme-provider/Theme";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -29,13 +31,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <ThemeProvider defaultTheme="dark" storageKey="mode">
-          <Suspense fallback={<Loader />}>{children}</Suspense>
-        </ThemeProvider>
-      </body>
+      <ThemeProvider defaultTheme="dark" storageKey="mode">
+        <Suspense fallback={<Loader />}>
+          <body
+            className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+          >
+            {children}
+          </body>
+        </Suspense>
+      </ThemeProvider>
     </html>
   );
 }
