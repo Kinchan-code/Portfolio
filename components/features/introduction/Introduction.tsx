@@ -23,17 +23,19 @@ function Introduction() {
               using React and Next.js, focused on creating exceptional digital
               experiences.
             </p>
-            <Button
-              aria-label="Open resume in a new tab"
-              variant="link"
-              onClick={() => {
-                window.open("/bangay-resume.pdf", "_blank");
-              }}
-              className="w-32 flex items-center gap-2"
-            >
-              <p className="font-list font-semibold">Check my Resume</p>
-              <ArrowUpRight className="w-4 h-4" />
-            </Button>
+            <div className="pl-2">
+              <Button
+                aria-label="Open resume in a new tab"
+                variant="link"
+                onClick={() => {
+                  window.open("/bangay-resume.pdf", "_blank");
+                }}
+                className="w-32 flex items-center gap-2"
+              >
+                <p className="font-list font-semibold">Check my Resume</p>
+                <ArrowUpRight className="w-4 h-4" />
+              </Button>
+            </div>
             <SocialsPage />
           </div>
           <div className="hidden xl:flex items-center justify-center">
