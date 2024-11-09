@@ -1,113 +1,44 @@
-'use client';
+"use client";
 
-// import { useState, useEffect, useRef } from 'react';
-// import Header from '@/components/header/page';
-// import AboutMe from '@/app/_about/page';
-import Introduction from '@/app/_title/introduction/page';
-import Socials from '@/app/_title/socials/page';
-import Header from '@/components/header/page';
-import Experiences from '@/app/_contents/experiences/page';
-import Projects from '@/app/_contents/my-projects/page';
-import AboutMe from './_contents/about/page';
-import Education from './_contents/education/page';
-import { Separator } from '@/components/ui/separator';
+import IntroductionPage from "@/app/(header)/_introduction/page";
+import Experiences from "@/app/(contents)/_experiences/page";
+import Projects from "@/app/(contents)/_projects/page";
+import AboutMe from "@/app/(contents)/_about/page";
+import Education from "@/app/(contents)/_education/page";
+import ScrollToTop from "@/components/shared/scroll-to-top/Scroll";
 
-// import Links from '@/app/_links/page';
-// import { cn } from '@/lib/utils';
-// import Experiences from '@/app/_experiences/page';
-// import Projects from '@/app/_my-projects/page';
+type SectionProps = {
+  component: React.ReactNode;
+};
+
+function Section({ component }: SectionProps) {
+  return <div className="scroll-mt-16 pb-12">{component}</div>;
+}
+
+const sections: SectionProps[] = [
+  { component: <AboutMe /> },
+  { component: <Experiences /> },
+  { component: <Projects /> },
+  { component: <Education /> },
+];
 
 function Home() {
-  // const [showHeader, setShowHeader] = useState(true);
-  // const [withBorder, setWithBorder] = useState(false);
-
-  // const aboutRef = useRef<HTMLDivElement>(null);
-  // const experiencesRef = useRef<HTMLDivElement>(null);
-  // const projectsRef = useRef<HTMLDivElement>(null);
-
-  // const Pages = {
-  //   About: aboutRef,
-  //   Experiences: experiencesRef,
-  //   Projects: projectsRef,
-  // };
-
-  // const scrollToSection = (ref: React.RefObject<HTMLElement>) => {
-  //   console.log('Scrolling to section:', ref.current);
-
-  //   ref.current?.scrollIntoView({ behavior: 'smooth' });
-  // };
-
-  // const handleSectionClick = (sectionName: string) => {
-  //   const forwardRef = Pages[sectionName as keyof typeof Pages];
-  //   if (forwardRef) {
-  //     scrollToSection(forwardRef);
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   let lastScrollY = 0;
-
-  //   const handleScroll = () => {
-  //     if (window.scrollY > lastScrollY) {
-  //       setShowHeader(false);
-  //     } else {
-  //       setShowHeader(true);
-  //       if (window.scrollY > 0) {
-  //         setWithBorder(true);
-  //       } else {
-  //         setWithBorder(false);
-  //       }
-  //     }
-  //     lastScrollY = window.scrollY;
-  //   };
-  //   window.addEventListener('scroll', handleScroll);
-  //   return () => {
-  //     window.removeEventListener('scroll', handleScroll);
-  //   };
-  // }, []);
-
   return (
-    <main className='min-h-screen max-w-screen px-24 mx-[8rem]'>
-      <div className='flex justify-between scroll-smooth'>
-        <header className='max-h-screen w-1/2 container justify-between flex flex-col gap-20 py-24 sticky top-0'>
-          <Introduction />
-          <Socials />
-        </header>
-
-        {/* <section className='h-screen  p-6 '>
-        {Object.entries(Pages).map(([name, ref], index) => (
-          <div
-            key={index}
-            ref={ref}
-            className='flex justify-center flex-col items-center h-full w-full gap-40 p-6'
-          >
-            {name === 'About' && <AboutMe />}
-            {name === 'Experiences' && <Experiences />}
-            {name === 'Projects' && <Projects />}
-          </div>
-        ))}
-      </section> */}
-        <section className='w-1/2 h-full container flex flex-col py-24'>
-          <div className='scroll-mt-16 pb-12'>
-            <AboutMe />
-          </div>
-          <div className='scroll-mt-16 pb-12'>
-            <Experiences />
-          </div>
-          <Separator className='my-12 bg-primary' />
-          <div className='scroll-mt-16'>
-            <Projects />
-          </div>
-          <Separator className='my-12 bg-primary' />
-          <div className='scroll-mt-16'>
-            <Education />
-          </div>
-        </section>
-        {/* Dark Mode Toggle */}
-        <section className='fixed top-5 right-5'>
-          <Header />
+    <main className="min-h-screen max-w-screen px-6 lg:mx-[8rem] lg:px-12">
+      <header className="flex justify-between">
+        <IntroductionPage />
+      </header>
+      <div className="flex justify-between scroll-smooth">
+        <section className="h-full flex flex-col">
+          {sections.map((section, index) => (
+            <Section key={index} component={section.component} />
+          ))}
         </section>
       </div>
+      <ScrollToTop />
+      <footer className="py-8 text-center text-xs sm:text-sm text-muted-foreground">
+        <p>© 2024 Christian Bangay. All rights reserved.</p>
+      </footer>
     </main>
   );
 }
