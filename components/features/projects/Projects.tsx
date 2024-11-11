@@ -1,7 +1,7 @@
 import Card from "@/components/shared/card/Card";
 import { Button } from "@/components/ui/button";
 import { projects } from "@/lib/data/CardContents";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useRouter } from "next/navigation";
 
 function Projects() {
@@ -17,7 +17,7 @@ function Projects() {
       </label>
       <div id="projects" className="flex flex-col gap-6 lg:gap-0">
         {projects.map((info, index) => (
-          <Card info={{ ...info, image: info.image.src }} key={index} />
+          <Card info={{ ...info, images: info.images }} key={index} />
         ))}
       </div>
       <div className="flex justify-start lg:pl-[1.5rem]  ">
@@ -27,7 +27,7 @@ function Projects() {
           onClick={() => router.push("/archive")}
         >
           <span className="text-lg font-body font-bold">View All Projects</span>
-          <ArrowUpRight className="w-4 h-4" />
+          <ArrowRight className="w-4 h-4" />
         </Button>
       </div>
     </main>
