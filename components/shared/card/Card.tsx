@@ -89,7 +89,7 @@ function Card({ info }: CardProps) {
           </div>
         )}
         {info.images && (
-          <div className="flex overflow-x-auto gap-2">
+          <div className="flex overflow-x-auto gap-2 cursor-gr">
             {info.images.map((image, index) => (
               <Image
                 key={index}
@@ -97,7 +97,7 @@ function Card({ info }: CardProps) {
                 alt={info.title || ""}
                 height={150}
                 width={150}
-                className="rounded-md object-cover cursor-pointer"
+                className="rounded-md object-cover size-auto cursor-pointer"
                 onClick={() => openModalWithImage(index)}
               />
             ))}
@@ -122,7 +122,7 @@ function Card({ info }: CardProps) {
                 alt={info.title || ""}
                 height={1000}
                 width={1000}
-                className="rounded-md h-full w-full"
+                className="rounded-md size-auto object-cover"
               />
             </div>
           </Modal>
