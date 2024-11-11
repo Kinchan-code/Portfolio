@@ -11,11 +11,12 @@ function About() {
         id="about"
         className="text-md font-body text-wrap text-justify lg:p-4 p-2 lg:px-6"
       >
-        I am a Frontend Engineer, focused on creating user-friendly and
-        responsive web interfaces using modern technologies. Recently graduated
-        with a Computer Science degree from Pamantasan ng Lungsod ng Maynila and
-        continuously seeking oppurtunities to learn and contribute to innovative
-        web projects.
+        I am a Frontend Engineer, I build user-friendly, accessible, and
+        responsive web interfaces using React and Next.js, focused on creating
+        exceptional digital experiences. Recently graduated with a Computer
+        Science degree from Pamantasan ng Lungsod ng Maynila and continuously
+        seeking oppurtunities to learn and contribute to innovative web
+        projects.
       </p>
     </main>
   );

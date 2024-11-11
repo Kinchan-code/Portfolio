@@ -25,7 +25,7 @@ const sections: SectionProps[] = [
 function Home() {
   return (
     <main className="min-h-screen max-w-screen px-6 lg:mx-[8rem] lg:px-12">
-      <header className="flex justify-between">
+      <header className="w-full">
         <IntroductionPage />
       </header>
       <div className="flex justify-between scroll-smooth">

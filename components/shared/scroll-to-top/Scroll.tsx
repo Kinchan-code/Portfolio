@@ -32,7 +32,7 @@ function ScrollToTop() {
           size="icon"
           onClick={scrollToTop}
           aria-label="Scroll to top"
-          className="bg-primary text-primary-foreground"
+          className="bg-primary text-primary-foreground hover:bg-primary/95 hover:text-primary-foreground"
         >
           <ArrowUp />
         </Button>
