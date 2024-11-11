@@ -1,7 +1,8 @@
 import projectResolve from "@/public/web-project-resolve.png";
 import haribon from "@/public/haribon-e-wall.png";
 import orasan from "@/public/ojt-orasan.png";
-import mapa from "@/public/mapa.png";
+import haribonpage from "@/public/haribon-e-wall-page.png";
+import orasanlogin from "@/public/ojt-orasan-login.png";
 
 export const workExperience = [
   {
@@ -46,7 +47,8 @@ export const workExperience = [
 
 export const projects = [
   {
-    image: projectResolve,
+    date: "June 2024 - Sept 2024",
+    images: [projectResolve],
     title: "DSWD Project Resolve",
     path: "https://ncr-dswd.ph/",
     company: "Dreamforge Innovations Inc.",
@@ -66,7 +68,8 @@ export const projects = [
     ],
   },
   {
-    image: haribon,
+    date: "Sept 2023 - Dec 2023",
+    images: [haribon, haribonpage],
     title: "Haribon E-Wall",
     path: "https://haribon-e-wall.web.app/",
     company: "Pamantasan ng Lungsod ng Maynila",
@@ -83,7 +86,8 @@ export const projects = [
     ],
   },
   {
-    image: orasan,
+    date: "July 2023 - August 2023",
+    images: [orasanlogin, orasan],
     title: "InternConnect: ORASAN",
     company: "Gothong Southern Shipping Lines Inc.",
     description:
@@ -100,22 +104,7 @@ export const projects = [
       { name: "Project Management" },
     ],
   },
-  {
-    image: mapa,
-    title: "MAPA",
-    company: "Gothong Southern Shipping Lines Inc.",
-    description:
-      "MAPA is a web application designed to provide real-time information about the location of the company's vessels. It utilizes the Leaflet API to display the vessels' positions on a map, allowing for easy visualization and monitoring of their whereabouts. The application also includes features for displaying vessel details, such as name, type, and current location, providing users with comprehensive information at a glance.",
-    links: [],
-    technologies: [
-      { name: "React.js" },
-      { name: "Mantine" },
-      { name: "TypeScript" },
-      { name: "Git" },
-      { name: "Leaflet API" },
-      { name: "Project Management" },
-    ],
-  },
+  // Additional projects can be added here
 ];
 
 export const education = [
