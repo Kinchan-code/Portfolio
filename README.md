@@ -20,7 +20,7 @@ This portfolio includes:
 
 ## Technologies Used
 
-- **Next.js**: For server-side rendering and routing.
+- **Next.js**: For the frontend framework.
 - **TypeScript**: For type safety.
 - **Tailwind CSS**: For styling.
 - **Shadcn/UI**: For components.
