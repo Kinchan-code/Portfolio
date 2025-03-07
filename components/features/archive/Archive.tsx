@@ -16,7 +16,7 @@ function Archive() {
           <Button
             variant="ghost"
             className="text-sm font-body flex items-center gap-2 p-0 hover:bg-transparent"
-            onClick={() => router.back()}
+            onClick={() => router.push("/")}
           >
             <ArrowLeft className="w-4 h-4" />
             <span className="text-lg font-body">Christian Bangay</span>

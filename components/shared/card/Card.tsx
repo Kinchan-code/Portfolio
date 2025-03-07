@@ -120,9 +120,9 @@ function Card({ info }: CardProps) {
                   "/path/to/fallback/image.jpg"
                 }
                 alt={info.title || ""}
-                height={1000}
-                width={1000}
-                className="rounded-md size-auto object-cover"
+                // height={1000}
+                // width={1000}
+                className="rounded-md size-auto object-cover max-h-96"
               />
             </div>
           </Modal>
