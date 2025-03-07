@@ -1,7 +1,5 @@
 import projectResolve from "@/public/web-project-resolve.png";
-import haribon from "@/public/haribon-e-wall.png";
 import orasan from "@/public/ojt-orasan.png";
-import haribonpage from "@/public/haribon-e-wall-page.png";
 import orasanlogin from "@/public/ojt-orasan-login.png";
 import pasigLogin from "@/public/pasig-login.jpg";
 import pasigLanding from "@/public/pasig-landing-page.jpg";
