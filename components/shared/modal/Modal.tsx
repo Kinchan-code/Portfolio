@@ -30,12 +30,11 @@ function Modal({
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>{trigger}</DialogTrigger>
-      <DialogContent className="max-w-screen-lg">
+      <DialogContent className="max-w-96 lg:max-w-screen-lg rounded-md">
         <DialogHeader>
           <DialogTitle>{title}</DialogTitle>
           <DialogDescription>{description}</DialogDescription>
         </DialogHeader>
-
         {children}
         <DialogFooter>{footer}</DialogFooter>
       </DialogContent>

@@ -1,10 +1,10 @@
 "use client";
 
-import IntroductionPage from "@/app/(header)/_introduction/page";
-import Experiences from "@/app/(contents)/_experiences/page";
-import Projects from "@/app/(contents)/_projects/page";
-import AboutMe from "@/app/(contents)/_about/page";
-import Education from "@/app/(contents)/_education/page";
+import About from "@/components/features/about/About";
+import Education from "@/components/features/education/Education";
+import Experiences from "@/components/features/experiences/Experiences";
+import Introduction from "@/components/features/introduction/Introduction";
+import Projects from "@/components/features/projects/Projects";
 import ScrollToTop from "@/components/shared/scroll-to-top/Scroll";
 
 type SectionProps = {
@@ -16,7 +16,7 @@ function Section({ component }: SectionProps) {
 }
 
 const sections: SectionProps[] = [
-  { component: <AboutMe /> },
+  { component: <About /> },
   { component: <Experiences /> },
   { component: <Projects /> },
   { component: <Education /> },
@@ -26,7 +26,7 @@ function Home() {
   return (
     <main className="min-h-screen max-w-screen px-6 lg:mx-[8rem] lg:px-12">
       <header className="w-full">
-        <IntroductionPage />
+        <Introduction />
       </header>
       <div className="flex justify-between scroll-smooth">
         <section className="h-full flex flex-col">

@@ -1,7 +1,7 @@
-import SocialsPage from "@/app/(header)/_socials/page";
 import { motion } from "framer-motion";
 import { ArrowUpRight, Terminal } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Socials from "@/components/features/socials/Socials";
 
 function Introduction() {
   return (
@@ -31,7 +31,7 @@ function Introduction() {
                 <ArrowUpRight className="w-4 h-4" />
               </Button>
             </div>
-            <SocialsPage />
+            <Socials />
           </div>
           <div className="hidden xl:flex items-center justify-center xl:w-full">
             <motion.div

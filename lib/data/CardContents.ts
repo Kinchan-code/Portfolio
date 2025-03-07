@@ -3,6 +3,12 @@ import haribon from "@/public/haribon-e-wall.png";
 import orasan from "@/public/ojt-orasan.png";
 import haribonpage from "@/public/haribon-e-wall-page.png";
 import orasanlogin from "@/public/ojt-orasan-login.png";
+import pasigLogin from "@/public/pasig-login.jpg";
+import pasigLanding from "@/public/pasig-landing-page.jpg";
+import pasigAppointment from "@/public/pasig-make-an-appointment.jpg";
+import pasigTrack from "@/public/pasig-track-ticket.jpg";
+import pasigTransactions from "@/public/pasig-transactions.jpg";
+import pasigProfile from "@/public/pasig-profile.jpg";
 
 export const workExperience = [
   {
@@ -27,7 +33,7 @@ export const workExperience = [
     ],
   },
   {
-    date: "July 2023 - Aug 2023",
+    date: "July 2023 - August 2023",
     title: "Web Developer Intern",
     path: "https://gothong.com/",
     company: "Gothong Southern Shipping Lines Inc.",
@@ -47,6 +53,37 @@ export const workExperience = [
 
 export const projects = [
   {
+    date: "November 2024 - March 2025",
+    images: [
+      pasigLogin,
+      pasigLanding,
+      pasigAppointment,
+      pasigTrack,
+      pasigTransactions,
+      pasigProfile,
+    ],
+    title: "Pasig Queuing Management System",
+    path: "",
+    company: "Dreamforge Innovations Inc.",
+    description:
+      "Pasig Queuing Management System is a queuing system for Pasig City Hall's everyday transactions per offices and services. Pasig QMS consists of three interfaces: a kiosk app, an admin interface, and a mobile appointment interface. The kiosk and admin interfaces are used within Pasig City Hall, while the mobile appointment interface is available for public use. All interfaces are Progressive Web Apps (PWA).",
+    links: [],
+    technologies: [
+      { name: "React.js" },
+      { name: "TypeScript" },
+      { name: "Tailwind CSS" },
+      { name: "Mantine" },
+      { name: "React Query" },
+      { name: "Axios" },
+      { name: "Git" },
+      { name: "MySQL" },
+      { name: "Context API" },
+      { name: "API Integration" },
+      { name: "Unit Testing" },
+      { name: "PWA" },
+    ],
+  },
+  {
     date: "June 2024 - Sept 2024",
     images: [projectResolve],
     title: "DSWD Project Resolve",
@@ -65,24 +102,6 @@ export const projects = [
       { name: "API Integration" },
       { name: "Unit Testing" },
       { name: "PWA" },
-    ],
-  },
-  {
-    date: "Sept 2023 - Dec 2023",
-    images: [haribon, haribonpage],
-    title: "Haribon E-Wall",
-    path: "https://haribon-e-wall.web.app/",
-    company: "Pamantasan ng Lungsod ng Maynila",
-    description:
-      "Haribon E-Wall is a grievance forum designed for students within the university. Developed as a final project for a Software Engineering course, it served as a platform for students to voice concerns and feedback, facilitating communication between the student body and university administration. Despite its initial success and adoption by the school, the project was discontinued due to budget constraints.",
-    links: [],
-    technologies: [
-      { name: "React.js" },
-      { name: "Mantine" },
-      { name: "JavaScript" },
-      { name: "Git" },
-      { name: "Firebase" },
-      { name: "API Integration" },
     ],
   },
   {

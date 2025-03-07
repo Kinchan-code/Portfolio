@@ -32,15 +32,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <ThemeProvider defaultTheme="dark" storageKey="mode">
-        <Suspense fallback={<Loader />}>
-          <body
-            className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-          >
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        >
+          <Suspense fallback={<Loader />}>
             {children}
             <Analytics />
             <SpeedInsights />
-          </body>
-        </Suspense>
+          </Suspense>
+        </body>
       </ThemeProvider>
     </html>
   );
