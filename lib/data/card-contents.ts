@@ -14,7 +14,7 @@ export const workExperience = [
     path: 'https://www.simplevia.com/',
     company: 'Dreamforge Innovations Inc.',
     description:
-      'Responsible for transforming the user interface and enhancing the overall user experience. Leveraging React JS and various CSS libraries to create intuitive, efficient, and engaging front    end interfaces. Additionally, accountable for seamless API integration, ensuring a smooth and responsive user experience by employing the latest technologies and industry best practices.',
+      'Responsible for transforming the user interface and enhancing the overall user experience. Leveraging React JS and various CSS libraries to create intuitive, efficient, and engaging frontend interfaces. Additionally, accountable for seamless API integration, ensuring a smooth and responsive user experience by employing the latest technologies and industry best practices.',
     links: [],
     technologies: [
       { name: 'React.js' },
