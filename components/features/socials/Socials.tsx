@@ -1,24 +1,27 @@
-import Toggle from "@/components/shared/dark-mode-toggle/Toggle";
-import Abbr from "@/components/shared/tooltip/Tooltip";
-import { Button } from "@/components/ui/button";
-import { socialMedia } from "@/lib/data/SocialMedia";
-import { Dot } from "lucide-react";
-import React from "react";
+import Toggle from '@/components/shared/dark-mode-toggle/Toggle';
+import Abbr from '@/components/shared/tooltip/Tooltip';
+import { Button } from '@/components/ui/button';
+import { socialMedia } from '@/lib/data/social-media';
+import { Dot } from 'lucide-react';
+import React from 'react';
 
 function Socials() {
   return (
-    <section className="flex flex-row gap-4 items-center">
+    <section className='flex flex-row gap-4 items-center'>
       {socialMedia.map((social, index) => (
-        <Abbr title={social.name} key={index}>
+        <Abbr
+          title={social.name}
+          key={index}
+        >
           <Button
-            variant="outline"
-            size="icon"
+            variant='outline'
+            size='icon'
             suppressHydrationWarning
             onClick={() => {
-              if (social.link.startsWith("mailto:")) {
+              if (social.link.startsWith('mailto:')) {
                 window.location.href = social.link;
               } else {
-                window.open(social.link, "_blank");
+                window.open(social.link, '_blank');
               }
             }}
           >
