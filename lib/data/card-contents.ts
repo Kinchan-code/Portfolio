@@ -1,15 +1,20 @@
 import projectResolve from '@/public/web-project-resolve.png';
-import haribon from '@/public/haribon-e-wall.png';
-import orasan from '@/public/ojt-orasan.png';
+import pasigLogin from '@/public/pasig-login.jpg';
+import pasigLanding from '@/public/pasig-landing-page.jpg';
+import pasigAppointment from '@/public/pasig-make-an-appointment.jpg';
+import pasigTrack from '@/public/pasig-track-ticket.jpg';
+import pasigTransactions from '@/public/pasig-transactions.jpg';
+import pasigProfile from '@/public/pasig-profile.jpg';
+import discussionWeb from '@/public/discussion-platform-web.png';
 
 export const workExperience = [
   {
     date: 'June 2024 - Present',
-    title: 'Junior Front - End Engineer',
+    title: 'Junior Frontend Engineer',
     path: 'https://www.simplevia.com/',
     company: 'Dreamforge Innovations Inc.',
     description:
-      'Responsible for transforming the user interface and enhancing the overall user experience. Leveraging React JS and various CSS libraries to create intuitive, efficient, and engaging front-end interfaces. Additionally, accountable for seamless API integration, ensuring a smooth and responsive user experience by employing the latest technologies and industry best practices.',
+      'Responsible for transforming the user interface and enhancing the overall user experience. Leveraging React JS and various CSS libraries to create intuitive, efficient, and engaging frontend interfaces. Additionally, accountable for seamless API integration, ensuring a smooth and responsive user experience by employing the latest technologies and industry best practices.',
     links: [],
     technologies: [
       { name: 'React.js' },
@@ -21,10 +26,11 @@ export const workExperience = [
       { name: 'Axios' },
       { name: 'API Integration' },
       { name: 'Unit Testing' },
+      { name: 'Progressive Web App' },
     ],
   },
   {
-    date: 'July 2023 - Aug 2023',
+    date: 'July 2023 - August 2023',
     title: 'Web Developer Intern',
     path: 'https://gothong.com/',
     company: 'Gothong Southern Shipping Lines Inc.',
@@ -44,18 +50,65 @@ export const workExperience = [
 
 export const projects = [
   {
-    image: projectResolve,
+    date: 'July 2025 - August 2025',
+    images: [discussionWeb],
+    title: 'Discussion Platform',
+    path: 'https://discussion-platform-seven.vercel.app/',
+    description:
+      'A comprehensive medical protocols platform that enables healthcare professionals to collaborate through interactive discussions, peer reviews, and detailed comments. Users can create, share, and evaluate medical protocols while fostering knowledge exchange and best practice development within the medical community.',
+    technologies: [
+      { name: 'React.js' },
+      { name: 'TypeScript' },
+      { name: 'Tailwind CSS' },
+      { name: 'Shadcn UI' },
+      { name: 'React Query' },
+      { name: 'Axios' },
+      { name: 'Zustand' },
+      { name: 'Laravel' },
+      { name: 'Typesense' },
+      { name: 'MySQL' },
+    ],
+  },
+  {
+    date: 'November 2024 - March 2025',
+    images: [
+      pasigLogin,
+      pasigLanding,
+      pasigAppointment,
+      pasigTrack,
+      pasigTransactions,
+      pasigProfile,
+    ],
+    title: 'Pasig Queuing Management System',
+    path: '',
+    company: 'Dreamforge Innovations Inc.',
+    description:
+      "Pasig Queuing Management System is a queuing system for Pasig City Hall's everyday transactions per offices and services. Pasig QMS consists of three interfaces: a kiosk app, an admin interface, and a mobile appointment interface. The kiosk and admin interfaces are used within Pasig City Hall, while the mobile appointment interface is available for public use. All interfaces are Progressive Web Apps (PWA).",
+    technologies: [
+      { name: 'React.js' },
+      { name: 'TypeScript' },
+      { name: 'Tailwind CSS' },
+      { name: 'Mantine' },
+      { name: 'React Query' },
+      { name: 'Axios' },
+      { name: 'MySQL' },
+      { name: 'Context API' },
+      { name: 'API Integration' },
+      { name: 'Unit Testing' },
+      { name: 'PWA' },
+    ],
+  },
+  {
+    date: 'June 2024 - Sept 2024',
+    images: [projectResolve],
     title: 'DSWD Project Resolve',
-    path: 'https://ncr-dswd.ph/',
     company: 'Dreamforge Innovations Inc.',
     description:
       'Project Resolve is a web application for DSWD and public use, featuring interfaces for EOC/LGU, Regional Director/Mayor, public incident reporting, and the Quick Response Team. It ensures transparent disaster assistance distribution through a workflow where public reports are validated, approved by the Regional Director, and monitored by the Mayor.',
-    links: [],
     technologies: [
       { name: 'React.js' },
       { name: 'Tailwind CSS' },
       { name: 'TypeScript' },
-      { name: 'Git' },
       { name: 'MySQL' },
       { name: 'Zustand' },
       { name: 'API Integration' },
@@ -63,41 +116,7 @@ export const projects = [
       { name: 'PWA' },
     ],
   },
-  {
-    image: haribon,
-    title: 'Haribon E-Wall',
-    path: 'https://haribon-e-wall.web.app/',
-    company: 'Pamantasan ng Lungsod ng Maynila',
-    description:
-      'Haribon E-Wall is a grievance forum designed for students within the university. Developed as a final project for a Software Engineering course, it served as a platform for students to voice concerns and feedback, facilitating communication between the student body and university administration. Despite its initial success and adoption by the school, the project was discontinued due to budget constraints.',
-    links: [],
-    technologies: [
-      { name: 'React.js' },
-      { name: 'Mantine' },
-      { name: 'JavaScript' },
-      { name: 'Git' },
-      { name: 'Firebase' },
-      { name: 'API Integration' },
-    ],
-  },
-  {
-    image: orasan,
-    title: 'InternConnect: ORASAN',
-    company: 'Gothong Southern Shipping Lines Inc.',
-    description:
-      'InternConnect: ORASAN is an in-house web application developed for Gothong Southern Shipping Lines Inc. to efficiently manage and monitor the daily time records of their interns. Originally created as a requirement for an On-the-Job Training (OJT) program, this application served as a vital tool for tracking intern attendance and performance. It facilitated seamless communication and collaboration between interns and supervisors, ensuring transparency and accountability. The application was actively used for nearly a year, significantly enhancing the internship experience, until it was recently discontinued due to server limitations.',
-    links: [],
-    technologies: [
-      { name: 'React.js' },
-      { name: 'Mantine' },
-      { name: 'TypeScript' },
-      { name: 'Git' },
-      { name: 'Axios' },
-      { name: 'API Integration' },
-      { name: 'Firebase' },
-      { name: 'Project Management' },
-    ],
-  },
+  // Additional projects can be added here
 ];
 
 export const education = [
@@ -111,7 +130,7 @@ export const education = [
     links: [],
     technologies: [
       { name: 'Project Management' },
-      { name: 'Front-End Development' },
+      { name: 'Frontend Development' },
       { name: 'Software Engineering' },
       { name: 'Data Structures and Algorithms' },
       { name: 'Computer Networks' },
