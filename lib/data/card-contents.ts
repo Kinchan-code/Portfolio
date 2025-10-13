@@ -9,12 +9,35 @@ import discussionWeb from '@/public/discussion-platform-web.png';
 
 export const workExperience = [
   {
-    date: 'June 2024 - Present',
-    title: 'Junior Frontend Engineer',
+    date: 'Aug 2025 - Present',
+    title: 'Full Stack Developer',
+    path: 'https://optimasolutions.io',
+    company: 'Optimas Solutions Inc.',
+    description:
+      'As a Full Stack Developer at Optima Solutions, I build and maintain end-to-end web applications. I design user-friendly, accessible interfaces with React and Next.js while developing robust backend systems to ensure scalability and performance. I work across the full stack to deliver seamless digital experiences from database to user interface. This role was project-based under a full-time contract for a specific client project, focusing on both frontend and backend development',
+    links: [],
+    technologies: [
+      { name: 'Next.js' },
+      { name: 'SASS' },
+      { name: 'TypeScript' },
+      { name: 'Git' },
+      { name: 'Scrum' },
+      { name: 'State Management' },
+      { name: 'Axios' },
+      { name: 'API Integration' },
+      { name: 'API Development' },
+      { name: 'Laravel' },
+      { name: 'PHP' },
+      { name: 'MySQL' },
+    ],
+  },
+  {
+    date: 'June 2024 - Sept 2025',
+    title: 'Frontend Engineer',
     path: 'https://www.simplevia.com/',
     company: 'Dreamforge Innovations Inc.',
     description:
-      'Responsible for transforming the user interface and enhancing the overall user experience. Leveraging React JS and various CSS libraries to create intuitive, efficient, and engaging frontend interfaces. Additionally, accountable for seamless API integration, ensuring a smooth and responsive user experience by employing the latest technologies and industry best practices.',
+      'As a Frontend Engineer at Dreamforge Innovations Inc., I developed and optimized user interfaces to deliver smooth and engaging digital experiences. I utilized React.js and modern CSS libraries to build intuitive, responsive designs while ensuring seamless API integration. My focus was on performance, usability, and applying best practices to create efficient and user-friendly applications.',
     links: [],
     technologies: [
       { name: 'React.js' },
@@ -27,23 +50,6 @@ export const workExperience = [
       { name: 'API Integration' },
       { name: 'Unit Testing' },
       { name: 'Progressive Web App' },
-    ],
-  },
-  {
-    date: 'July 2023 - August 2023',
-    title: 'Web Developer Intern',
-    path: 'https://gothong.com/',
-    company: 'Gothong Southern Shipping Lines Inc.',
-    description: 'A 240-hour on the job training',
-    links: [],
-    technologies: [
-      { name: 'HTML/CSS' },
-      { name: 'React' },
-      { name: 'JavaScript' },
-      { name: 'TypeScript' },
-      { name: 'Git' },
-      { name: 'Project Management' },
-      { name: 'Scrum' },
     ],
   },
 ];
