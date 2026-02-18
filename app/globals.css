@@ -75,4 +75,43 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: oklch(0.5 0.01 285.823 / 0.3) transparent;
+  }
+
+  .dark * {
+    scrollbar-color: oklch(0.4 0.01 285.823 / 0.5) oklch(0.21 0.006 285.885);
+  }
+
+  *::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: oklch(0.5 0.01 285.823 / 0.3);
+    border-radius: 4px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    background: oklch(0.5 0.01 285.823 / 0.5);
+    background-clip: padding-box;
+  }
+
+  .dark *::-webkit-scrollbar-thumb {
+    background: oklch(0.4 0.01 285.823 / 0.5);
+    background-clip: padding-box;
+  }
+
+  .dark *::-webkit-scrollbar-thumb:hover {
+    background: oklch(0.5 0.01 285.823 / 0.6);
+    background-clip: padding-box;
+  }
 }

@@ -1,6 +1,6 @@
 'use client';
 
-import ArchiveTable from '@/components/features/archive/components/ArchiveTable';
+import ArchiveTable from '@/features/archive/components/ArchiveTable';
 import { data, headers } from '@/lib/data/archive-data';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';

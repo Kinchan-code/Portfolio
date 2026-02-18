@@ -1,10 +1,10 @@
 "use client";
 
-import About from "@/components/features/about/About";
-import Education from "@/components/features/education/Education";
-import Experiences from "@/components/features/experiences/Experiences";
-import Introduction from "@/components/features/introduction/Introduction";
-import Projects from "@/components/features/projects/Projects";
+import About from "@/features/about/About";
+import Education from "@/features/education/Education";
+import Experiences from "@/features/experiences/Experiences";
+import Introduction from "@/features/introduction/Introduction";
+import Projects from "@/features/projects/Projects";
 import ScrollToTop from "@/components/shared/scroll-to-top/Scroll";
 
 type SectionProps = {

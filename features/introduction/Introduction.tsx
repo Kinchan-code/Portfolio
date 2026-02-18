@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { ArrowUpRight, Terminal } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import Socials from '@/components/features/socials/Socials';
+import Socials from '@/features/socials/Socials';
 
 function Introduction() {
   return (
