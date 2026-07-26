@@ -1,46 +1,44 @@
 "use client";
 
-import About from "@/features/about/About";
-import Education from "@/features/education/Education";
-import Experiences from "@/features/experiences/Experiences";
-import Introduction from "@/features/introduction/Introduction";
-import Projects from "@/features/projects/Projects";
-import ScrollToTop from "@/components/shared/scroll-to-top/Scroll";
+import { AppFooter } from "@/components/layout";
+import { ScrollToTop } from "@/components/shared";
+import { About } from "@/features/about";
+import { Education } from "@/features/education";
+import { Experiences } from "@/features/experiences";
+import { Introduction } from "@/features/introduction";
+import { Projects } from "@/features/projects";
 
-type SectionProps = {
+interface SectionProps {
+  id: string;
   component: React.ReactNode;
-};
+}
 
-function Section({ component }: SectionProps) {
+function Section({ component }: Readonly<Pick<SectionProps, "component">>) {
   return <div className="scroll-mt-16 pb-12">{component}</div>;
 }
 
 const sections: SectionProps[] = [
-  { component: <About /> },
-  { component: <Experiences /> },
-  { component: <Projects /> },
-  { component: <Education /> },
+  { id: "about", component: <About /> },
+  { id: "experiences", component: <Experiences /> },
+  { id: "projects", component: <Projects /> },
+  { id: "education", component: <Education /> },
 ];
 
-function Home() {
+export default function Home() {
   return (
-    <main className="min-h-screen max-w-screen px-6 lg:mx-[8rem] lg:px-12">
+    <main className="min-h-screen max-w-screen px-6 lg:mx-32 lg:px-12">
       <header className="w-full">
         <Introduction />
       </header>
       <div className="flex justify-between scroll-smooth">
         <section className="h-full flex flex-col">
-          {sections.map((section, index) => (
-            <Section key={index} component={section.component} />
+          {sections.map((section) => (
+            <Section key={section.id} component={section.component} />
           ))}
         </section>
       </div>
       <ScrollToTop />
-      <footer className="py-8 text-center text-xs sm:text-sm text-muted-foreground">
-        <p>© 2024 Christian Bangay. All rights reserved.</p>
-      </footer>
+      <AppFooter />
     </main>
   );
 }
-
-export default Home;
