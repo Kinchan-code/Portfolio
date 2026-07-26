@@ -1,16 +1,16 @@
 export const siteConfig = {
   name: "Christian Bangay",
-  title: "Christian Bangay | Full Stack Developer",
+  title: "Christian Bangay | Frontend Software Engineer",
   description:
-    "Full Stack Developer building accessible, responsive web applications with React, Next.js, and robust backend systems. Explore my work experience, projects, and education.",
+    "Frontend Software Engineer building accessible, responsive web applications with React and Next.js, with full-stack experience across APIs, databases, and deployment. Explore my work experience, projects, and education.",
   url: "https://christian-bangay.vercel.app",
   locale: "en_US",
   email: "chanbangay@gmail.com",
   ogImage: "/me.jpg",
   keywords: [
     "Christian Bangay",
-    "Full Stack Developer",
     "Frontend Software Engineer",
+    "Full Stack Developer",
     "React",
     "Next.js",
     "TypeScript",

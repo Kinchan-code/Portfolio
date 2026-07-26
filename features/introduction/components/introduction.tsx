@@ -18,7 +18,7 @@ export function Introduction() {
               </h1>
             </div>
             <h2 className="text-lg font-medium text-muted-foreground sm:text-xl">
-              Full Stack Developer
+              Frontend Software Engineer
             </h2>
             <div className="pl-2">
               <Button

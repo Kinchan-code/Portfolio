@@ -11,12 +11,11 @@ export function About() {
         id="about"
         className="text-md font-body text-wrap text-justify lg:p-4 p-2 lg:px-6"
       >
-        I am a Full Stack Developer who builds end-to-end web applications with
-        user-friendly, accessible, and responsive interfaces using React and
-        Next.js, while also developing robust backend systems. Focused on
-        creating exceptional digital experiences from database to user
-        interface. I continuously seek opportunities to learn and contribute to
-        innovative web projects.
+        I am a Frontend Software Engineer who builds accessible, responsive web
+        applications with React and Next.js. I also work across the stack when
+        needed, APIs, databases, and deployment — to deliver solid end-to-end
+        product experiences. I continuously seek opportunities to learn and
+        contribute to innovative web projects.
       </p>
     </main>
   );
